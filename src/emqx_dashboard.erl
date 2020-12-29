@@ -81,7 +81,7 @@ is_authorized(_Path, Req) ->
             logger:log(error, #{},
               #{report_cb =>
               fun (_) ->
-                {'$logger_header'() ++
+                {logger_header() ++
                   "[Dashboard] Authorization Failure: username=~"
                   "s, reason=~p",
                   [Username, Reason]}
