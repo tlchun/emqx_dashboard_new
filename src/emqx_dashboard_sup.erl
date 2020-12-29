@@ -9,8 +9,6 @@
 -module(emqx_dashboard_sup).
 -author("root").
 
--module(emqx_dashboard_sup).
-
 -behaviour(supervisor).
 
 -export([start_link/0]).
