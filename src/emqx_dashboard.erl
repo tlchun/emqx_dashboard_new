@@ -101,4 +101,4 @@ format({Addr, Port}) when is_list(Addr) ->
 format({Addr, Port}) when is_tuple(Addr) ->
   io_lib:format("~s:~w", [inet:ntoa(Addr), Port]).
 
-logger_header() -> "".
+logger_header() -> ["emqx dashboard"].
