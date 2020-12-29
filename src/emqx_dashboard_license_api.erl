@@ -19,18 +19,17 @@
 
 license_info(_Bindings, _Params) ->
 %%  Info = emqx_license_mgr:info(),
-  Info = #{
-    version=>"4.2.2",
-    vendor => "EMQ Technologies Co., Ltd.",
-    type=>"official",
-    max_connections=>999999999,
-    issued_at=>"2020-06-20 03:02:52",
-    expiry_at=>"2200-01-01 03:02:52",
-    expiry_at=>false,
-    customer=>"EMQ X Evaluation",
-    customer_type=>"10",
-    email=>"513036862@qq.com"
-  },
+  Info = [
+    {customer, "Customer"},
+    {email, "513036862@qq.com"},
+    {max_connections, 999999999},
+    {issued_at, "2020-06-20 03:02:52"},
+    {expiry_at, "2200-01-01 03:02:52"},
+    {vendor, "EMQ Technologies Co., Ltd."},
+    {version, "4.2.2"},
+    {type, "official"},
+    {customer_type, 10},
+    {expiry, false}],
 %%  Info = #{customer => {"_Text", "Customer"}, email => "513036862@qq.com",
 %%    permits => "免费", product => "EMQX",
 %%    validity => {"2020", "20200"}, vendor => "Vendor",
