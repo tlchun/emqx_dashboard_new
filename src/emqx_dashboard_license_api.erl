@@ -17,13 +17,24 @@
 
 -export([license_info/2]).
 
-
 license_info(_Bindings, _Params) ->
 %%  Info = emqx_license_mgr:info(),
-  Info = #{customer := {"_Text", "Customer"}, email := "513036862@qq.com",
-    permits := "免费", product := "EMQX",
-    validity := {"2020", "20200"}, vendor := "Vendor",
-    version := "4.2.3"},
+  Info = #{
+    version=>"4.2.2",
+    vendor => "EMQ Technologies Co., Ltd.",
+    type=>"official",
+    max_connections=>999999999,
+    issued_at=>"2020-06-20 03:02:52",
+    expiry_at=>"2200-01-01 03:02:52",
+    expiry_at=>false,
+    customer=>"EMQ X Evaluation",
+    customer_type=>"10",
+    email=>"513036862@qq.com"
+  },
+%%  Info = #{customer => {"_Text", "Customer"}, email => "513036862@qq.com",
+%%    permits => "免费", product => "EMQX",
+%%    validity => {"2020", "20200"}, vendor => "Vendor",
+%%    version => "4.2.3"},
   return({ok, info_list_to_binary(Info)}).
 
 info_list_to_binary(Info) -> list_to_binary(Info, []).
