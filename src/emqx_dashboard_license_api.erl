@@ -20,10 +20,10 @@
 
 license_info(_Bindings, _Params) ->
 %%  Info = emqx_license_mgr:info(),
-  Info = #{customer := {"_Text", "Customer"}, email := "513036862@qq.com",
-    permits := "免费", product := "EMQX",
-    validity := {"2020", "20200"}, vendor := "Vendor",
-    version := "4.2.3"},
+  Info = #{customer => {"_Text", "Customer"}, email => "513036862@qq.com",
+    permits => "免费", product => "EMQX",
+    validity => {"2020", "20200"}, vendor => "Vendor",
+    version => "4.2.3"},
   return({ok, info_list_to_binary(Info)}).
 
 info_list_to_binary(Info) -> list_to_binary(Info, []).
